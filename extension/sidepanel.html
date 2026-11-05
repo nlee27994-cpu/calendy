@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calendy</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header class="top">
+      <svg class="buddy" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="6" y="9" width="36" height="33" rx="9" class="buddy-body" />
+        <rect x="6" y="9" width="36" height="10" rx="5" class="buddy-band" />
+        <rect x="14" y="4" width="4" height="10" rx="2" class="buddy-ring" />
+        <rect x="30" y="4" width="4" height="10" rx="2" class="buddy-ring" />
+        <circle cx="18" cy="29" r="3.2" class="buddy-eye" />
+        <circle cx="30" cy="29" r="3.2" class="buddy-eye" />
+        <path d="M19 35.5q5 3.5 10 0" class="buddy-smile" />
+      </svg>
+      <div class="brand">
+        <strong>Calendy</strong>
+        <span id="subtitle">Your study planner</span>
+      </div>
+      <button id="refresh" class="icon-btn" title="Refresh" hidden>↻</button>
+    </header>
+
+    <nav class="tabs" id="tabs" hidden>
+      <button data-tab="assignments" class="active">Assignments</button>
+      <button data-tab="plan">Plan</button>
+      <button data-tab="settings">Settings</button>
+    </nav>
+
+    <main id="view"></main>
+    <div id="status" class="status" hidden></div>
+    <div id="toast" class="toast" hidden></div>
+
+    <script type="module" src="sidepanel.js"></script>
+  </body>
+</html>

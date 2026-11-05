@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Calendy - Study Planner",
+  "version": "0.1.0",
+  "description": "Plans study time from Google Classroom around your Google Calendar, and keeps assignment files organized.",
+  "minimum_chrome_version": "116",
+  "action": { "default_title": "Open Calendy" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "permissions": ["identity", "downloads", "storage", "sidePanel"],
+  "host_permissions": [
+    "https://classroom.googleapis.com/*",
+    "https://www.googleapis.com/*",
+    "https://sheets.googleapis.com/*",
+    "https://oauth2.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/classroom.courses.readonly",
+      "https://www.googleapis.com/auth/classroom.coursework.me.readonly",
+      "https://www.googleapis.com/auth/drive.readonly",
+      "https://www.googleapis.com/auth/spreadsheets.readonly",
+      "https://www.googleapis.com/auth/calendar.readonly",
+      "https://www.googleapis.com/auth/calendar.events"
+    ]
+  }
+}
